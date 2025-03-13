@@ -1,0 +1,262 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Top navigation bar */
+.box {
+    width: 100vw;
+    height: 5vw;
+    background-color: #081c54;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+/* Menu icon inside the top bar */
+.box img {
+    z-index: 100;
+    margin-left: 2vw;
+    width: 2vw;
+    height: 2vw;
+    transition: 0.1s;
+}
+
+.box img:hover {
+    scale: 1.1;
+}
+
+/* Dropdown menu (hidden by default) */
+.box2 {
+    width: 100vw;
+    height: 5vw;
+    background-color: #081c54;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.box2.active {
+    transform: translateY(5vw);
+}
+
+/* Logo styling */
+.logo {
+    margin: 0 auto;
+    width: 5vw;
+    height: 5vw;
+    background-color: #0C359E; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    color: white;        
+    font-size: 1.5vw;      
+}
+
+.logo img {
+    width: 4vw;
+    height: 4vw;
+}
+
+/* Main image section */
+.IDPIMAGE {
+    left: 0;
+    position: relative;
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+
+.IDPIMAGE img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+
+/* Apply blur and darken effect when hovering */
+.IDPIMAGE:hover img {
+    filter: blur(0.5vw) brightness(50%);
+}
+
+.IDPIMAGE:hover .popup-button {
+    filter: none;
+}
+
+/* Main section after the image */
+.Section2 {
+    width: 100vw;
+    height: 20vw;
+    background-color: #081c54;
+    padding-top: 0;
+    margin: 0;
+    padding-left: 5vw;
+    left: 0;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    transition: 0.1s ease-in-out;
+}
+
+/* Dropdown textbox */
+.dropdowntextbox {
+    background-color: aliceblue;
+    width: 5vw;
+    height: 5vw;
+}
+
+/* Keep text size fixed while shrinking box */
+.dropdowntextbox span {
+    font-size: 1vw;
+    scale: 1.25;
+}
+
+/* Shrink box on hover */
+.dropdowntextbox:hover {
+    scale: 0.8;
+}
+
+/* Section text */
+.Section2Text {
+    background-color: #041132;
+    width: 50vw;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: white;
+    display: inline-block;
+    padding-left: 2vw;
+    padding-top: 2vw;
+}
+
+/* Blinking cursor effect */
+.cursor {
+    font-weight: bold;
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Button inside Section2 */
+.button {
+    position: absolute;
+    bottom: 10vw;
+    right: 30vw;
+    padding: 1vw;
+    font-family: 'Courier New', monospace;
+    background-color: #0C359E;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1vw;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Button effects */
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(1.15);
+}
+
+/* Popup button styling */
+.popup-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 5vw;
+}
+
+/* Popup button hover effect */
+.popup-button:hover {
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+}
+
+/* Circular popup buttons */
+.popup-button {
+    font-family: 'Courier New', monospace;
+    background-color: white;
+    color: Black;
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: none;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    position: relative;
+    filter: none !important;
+    text-align: center;
+    border: none;
+}
+
+/* Move popup buttons */
+.popup-button.left {
+    transform: translateX(-5vw);
+}
+
+.popup-button.right {
+    transform: translateX(5vw);
+}
+
+.popup-button:hover {
+    transform: scale(1.1);
+}
+
+/* Show popup buttons when hovering over IDPIMAGE */
+.IDPIMAGE:hover .popup-button {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale effect on Section2 hover */
+.Section2:hover {
+    scale: 1.1;
+}
+
+/* Darken specific elements when hovering over Section2 */
+body:has(.Section2:hover) .IDPIMAGE,
+body:has(.Section2:hover) .box,
+body:has(.Section2:hover) .box2.active {
+    filter: brightness(20%);
+}
+
+/* Darken specific elements when hovering over box */
+body:has(.box:hover) .IDPIMAGE,
+body:has(.box:hover) .Section2,
+body:has(.box2.active:hover) .IDPIMAGE,
+body:has(.box2.active:hover) .Section2 {
+    filter: brightness(20%);
+}
+
+/* Darken elements when hovering over IDPIMAGE */
+body:has(.IDPIMAGE:hover) .Section2,
+body:has(.IDPIMAGE:hover) .box,
+body:has(.IDPIMAGE:hover) .box2.active {
+    filter: brightness(20%);
+}
