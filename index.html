@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Box Animation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="box">
+    <div onclick="toggleBox()">
+        <img src="image/menu-bar.png" alt="3lineicon">
+    </div>
+
+</div>
+    <div class="box2">
+        <div class ="dropdowntextbox">
+            <span>
+                Test
+            </span>
+        </div>
+    </div>
+    <div class="IDPIMAGE">
+        <img src="image/PhotoIDP.png" alt="PhotoIDP">
+        <div class="popup-buttons">
+            <a href="https://link1.com" target="_blank" class="popup-button left">
+                📷 
+            </a>
+            <a href="https://link2.com" target="_blank" class="popup-button right" style="font-size: 1.5 vw;">
+                more
+            </a>
+        </div>
+    </div>
+    <div class="Section2">
+        <img src="image/cropwebsitedesign.png" alt="canvadesign">
+        <div class="Section2Text">
+            <span id="dynamicText"></span><span class="cursor">|</span>
+        </div>
+        <a href="#" id="dynamicButton" class="button">
+            www.tup.ac.th
+        </a>
+    </div>
+    <script>
+        const box = document.querySelector('.box');
+const box2 = document.querySelector('.box2');
+
+/* When hovering over .box, activate .box2 */
+box.addEventListener("mouseover", () => {
+    box2.classList.add("active");
+});
+
+/* Keep .box2 active when hovered */
+box2.addEventListener("mouseover", () => {
+    box2.classList.add("active");
+});
+
+/* Remove .box2.active when mouse leaves */
+box.addEventListener("mouseleave", () => {
+    box2.classList.remove("active");
+});
+
+box2.addEventListener("mouseleave", () => {
+    box2.classList.remove("active");
+});
+
+/* Typewriter effect for the "Learn More" text */
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("dynamicText"); 
+    const text = "Learn More :"; 
+    let index = 0; 
+
+    function typeWriter() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 150);
+        } else {
+            setTimeout(resetText, 5000);
+        }
+    }
+
+    function resetText() {
+        textElement.innerHTML = "";
+        index = 0;
+        typeWriter();
+    }
+
+    typeWriter();
+});
+
+/* Open link in a new tab when clicking the button */
+document.getElementById("dynamicButton").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.open("http://www.tup.ac.th/", "_blank");
+});
+
+    </script>
+</body>
+</html>
