@@ -7,93 +7,69 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div class="box">
-    <div onclick="toggleBox()">
-        <img src="image/menu-bar.png" alt="3lineicon">
-    </div>
+    <div class="container">
+        <div id="idp-content" class="content active">
+            <nav class="navigator">
+                <div class="burger-nav" onclick="toggleNavList()">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="line three"></div>
+                </div>
+                <div class="nav-list">
+                    <a href="#">
+                        HOME
+                    </a>
+                    <a href="#">
+                        CURRICULUM
+                    </a>
+                    <a href="#">
+                        ACTIVITIES
+                    </a>
+                    <a href="#">
+                        DIRECTORY
+                    </a>
+                    <a href="#">
+                        GENERATION
+                    </a>
+                </div>
+                <img src="image/logo.png" alt="logo" class="logo">
+                <div class="idp-itp-switch" onclick="toggleIdpItp()">
+                    <div id="idp" class="active"> 
+                            IDP
+                        </a>
+                    </div>
+                    <div id="highlightswitch" class="active"></div>
+                    <div id="itp">
+                            ITP
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="itp-content" class="content">
 
-</div>
-    <div class="box2">
-        <div class ="dropdowntextbox">
-            <span>
-                Test
-            </span>
         </div>
-    </div>
-    <div class="IDPIMAGE">
-        <img src="image/PhotoIDP.png" alt="PhotoIDP">
-        <div class="popup-buttons">
-            <a href="https://link1.com" target="_blank" class="popup-button left">
-                📷 
-            </a>
-            <a href="https://link2.com" target="_blank" class="popup-button right" style="font-size: 1.5 vw;">
-                more
-            </a>
-        </div>
-    </div>
-    <div class="Section2">
-        <img src="image/cropwebsitedesign.png" alt="canvadesign">
-        <div class="Section2Text">
-            <span id="dynamicText"></span><span class="cursor">|</span>
-        </div>
-        <a href="#" id="dynamicButton" class="button">
-            www.tup.ac.th
-        </a>
     </div>
     <script>
-        const box = document.querySelector('.box');
-const box2 = document.querySelector('.box2');
+        function toggleIdpItp() {
+            const idp = document.getElementById("idp");
+            const itp = document.getElementById("itp");
+            const highlight = document.getElementById("highlight-switch");
 
-/* When hovering over .box, activate .box2 */
-box.addEventListener("mouseover", () => {
-    box2.classList.add("active");
-});
-
-/* Keep .box2 active when hovered */
-box2.addEventListener("mouseover", () => {
-    box2.classList.add("active");
-});
-
-/* Remove .box2.active when mouse leaves */
-box.addEventListener("mouseleave", () => {
-    box2.classList.remove("active");
-});
-
-box2.addEventListener("mouseleave", () => {
-    box2.classList.remove("active");
-});
-
-/* Typewriter effect for the "Learn More" text */
-document.addEventListener("DOMContentLoaded", function () {
-    const textElement = document.getElementById("dynamicText"); 
-    const text = "Learn More :"; 
-    let index = 0; 
-
-    function typeWriter() {
-        if (index < text.length) {
-            textElement.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 150);
-        } else {
-            setTimeout(resetText, 5000);
+            if (idp.classList.contains("active")) {
+                // เปลี่ยนไปเป็น ITP
+                idp.classList.remove("active");
+                highlightswitch.classList.remove("active");
+                itp.classList.add("active");
+                highlight.style.left = "52%";
+            } else {
+                // เปลี่ยนไปเป็น IDP
+                itp.classList.remove("active");
+                idp.classList.add("active");
+                highlightswitch.classList.add("active");
+                highlight.style.left = "2%";
+            }
         }
-    }
-
-    function resetText() {
-        textElement.innerHTML = "";
-        index = 0;
-        typeWriter();
-    }
-
-    typeWriter();
-});
-
-/* Open link in a new tab when clicking the button */
-document.getElementById("dynamicButton").addEventListener("click", function(event) {
-    event.preventDefault();
-    window.open("http://www.tup.ac.th/", "_blank");
-});
-
     </script>
 </body>
 </html>
