@@ -41,7 +41,7 @@
                     <div id="highlightswitch" class="active"></div>
                     <div id="itp">
                             ITP
-                        </a>
+                    </a>
                     </div>
                 </div>
             </nav>
@@ -51,6 +51,11 @@
         </div>
     </div>
     <script>
+    function toggleNavList() {
+            const navList = document.querySelector(".nav-list");
+            navList.classList.toggle("active");
+        }
+        
         function toggleIdpItp() {
             const idp = document.getElementById("idp");
             const itp = document.getElementById("itp");
