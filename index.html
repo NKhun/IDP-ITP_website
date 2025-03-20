@@ -3,78 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Box Animation</title>
-    <link rel="stylesheet" href="index.css">
+    <title>IDP-ITP </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <nav class="navigator">
+            <div class="burger-nav">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div class="line three"></div>
+            </div>
+            <div class="nav-list">
+                <a href="#">
+                    หน้าหลัก
+                </a>
+                <a href="#announcement">
+                    ประชาสัมพันธ์
+                </a>
+                <a href="#">
+                    หลักสูตร
+                </a>
+                <a href="#">
+                    กิจกรรม
+                </a>
+                <a href="#">
+                    GENERATION
+                </a>
+            </div>
+        <img src="image/logo.png" alt="logo" class="logo">
+        <div class="idp-itp-switch" onclick="toggleIdpItp()">
+            <div id="idp" class="active"> 
+                    IDP
+            </div>
+            <div id="highlightswitch" class="active"></div>
+            <div id="itp">
+                    ITP
+            </div>
+        </div>
+    </nav>
         <div id="idp-content" class="content active">
-            <nav class="navigator">
-                <div class="burger-nav" onclick="toggleNavList()">
-                    <div class="line one"></div>
-                    <div class="line two"></div>
-                    <div class="line three"></div>
+            <div class="slider-container">
+                <header>
+                    <h1 class="header">IDP</h1>
+                    <p>Innovative digital program</p>
+                    <button class="idp-itp-button" onclick="toggleIdpItp()"> <span>ไปหน้า</span> ITP</button>
+                </header>
+                <div class="slider">
+                    <img src="image/PhotoIDP.png" alt="Image">
+                    <img src="image/test1.JPG" alt="Image 2">
+                    <img src="image/test2.JPG" alt="Image 3">
+                    <img src="image/PhotoIDP.png" alt="Image">
+                    <img src="image/test1.JPG" alt="Image 2">
+                    <img src="image/test2.JPG" alt="Image 3">
                 </div>
-                <div class="nav-list">
-                    <a href="#">
-                        HOME
-                    </a>
-                    <a href="#">
-                        CURRICULUM
-                    </a>
-                    <a href="#">
-                        ACTIVITIES
-                    </a>
-                    <a href="#">
-                        DIRECTORY
-                    </a>
-                    <a href="#">
-                        GENERATION
-                    </a>
-                </div>
-                <img src="image/logo.png" alt="logo" class="logo">
-                <div class="idp-itp-switch" onclick="toggleIdpItp()">
-                    <div id="idp" class="active"> 
-                            IDP
-                        </a>
+            </div>
+            <section id="announcement" class="announcement-container">
+                <div class="scrolling-text-container">
+                    <div class="scrolling-text-inner" style="--marquee-speed: 30s; --direction:scroll-left" role="marquee">
+                        <div class="scrolling-text">
+                            <div class="scrolling-text-item">ANNOUNCEMENT</div>
+                            <div class="scrolling-text-item">ประชาสัมพันธ์</div>
+                            <div class="scrolling-text-item">ANNOUNCEMENT</div>
+                            <div class="scrolling-text-item">ประชาสัมพันธ์</div>
+                        </div>
+                        <div class="scrolling-text">
+                            <div class="scrolling-text-item">ANNOUNCEMENT</div>
+                            <div class="scrolling-text-item">ประชาสัมพันธ์</div>
+                            <div class="scrolling-text-item">ANNOUNCEMENT</div>
+                            <div class="scrolling-text-item">ประชาสัมพันธ์</div>
+                        </div>
+                        <div class="scrolling-text">
+                            <div class="scrolling-text-item">ANNOUNCEMENT</div>
+                            <div class="scrolling-text-item">ประชาสัมพันธ์</div>
+                            <div class="scrolling-text-item">ANNOUNCEMENT</div>
+                            <div class="scrolling-text-item">ประชาสัมพันธ์</div>
+                        </div>
                     </div>
-                    <div id="highlightswitch" class="active"></div>
-                    <div id="itp">
-                            ITP
-                    </a>
+                </div>
+                <div class="gridBox animate">
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
                     </div>
                 </div>
-            </nav>
+                <div class="gridMore">
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="context">
+                        <img src="image/test1.JPG" alt="example">
+                        <h3>Lorem ipsum</h3>
+                        <p>is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                    </div>
+                </div>
+                <button class="showButton" onclick="toggleGridMore()">
+                    <div class="showMore active">Show More</div>
+                    <div class="showLess">Show Less</div>
+                </button>
+            </section>
+            <div class="idp-animation">
+                    <div class="idp-text one animate">
+                        <h1><span>I</span>NNOVATIVE</h1>
+                        <h1><span>D</span>IGITAL</h1>
+                        <h1><span>P</span>ROGRAM</h1>
+                    </div>
+                    <div class="idp-text two animate">
+                        <h1>EMPOWERING <span>MINDS</span></h1>
+                        <h1><span>CRAFTING </span>TECHNOLOGY</h1>
+                    </div>
+                    <svg id="line" class="animate" viewBox="0 0 457 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- เส้นที่ต่อเนื่องกัน -->
+                        <path class="line animate" d="M26.2595 26.2511L188 199H426" stroke="#F6F5F5" stroke-width="18" stroke-linecap="round"/>
+                    
+                        <!-- จุดเริ่มต้น -->
+                        <circle class="circle1 animate" cx="26.6829" cy="25.8277" r="25.8277" stroke-width="5" fill="#F6F5F5"/>
+                    
+                        <!-- จุดปลายทาง -->
+                        <circle class="circle2 animate" cx="426.5" cy="198.5" r="30.5"  stroke-width="5" fill="#F6F5F5"/>
+                    </svg>
+            </div>
         </div>
         <div id="itp-content" class="content">
-
         </div>
     </div>
     <script>
-    function toggleNavList() {
-            const navList = document.querySelector(".nav-list");
-            navList.classList.toggle("active");
-        }
-        
+        //change ITP-IDP toggle
         function toggleIdpItp() {
             const idp = document.getElementById("idp");
             const itp = document.getElementById("itp");
+            const idpContent = document.getElementById("idp-content")
+            const itpContent = document.getElementById("itp-content")
             const highlight = document.getElementById("highlight-switch");
 
             if (idp.classList.contains("active")) {
-                // เปลี่ยนไปเป็น ITP
                 idp.classList.remove("active");
+                idpContent.classList.remove("active");
                 highlightswitch.classList.remove("active");
                 itp.classList.add("active");
+                itpContent.classList.add("active");
                 highlight.style.left = "52%";
-            } else {
-                // เปลี่ยนไปเป็น IDP
+            } 
+            else {
                 itp.classList.remove("active");
+                itpContent.classList.remove("active");
                 idp.classList.add("active");
+                idpContent.classList.add("active");
                 highlightswitch.classList.add("active");
                 highlight.style.left = "2%";
             }
         }
+
+        //animate on scroll
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("scroll");
+                    }
+                    else {
+                        entry.target.classList.remove("scroll")
+                    }
+                });
+            }, { threshold: 0.01 });
+
+            document.querySelectorAll(".animate").forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        let currentIndex = 0;
+        const totalSlides = document.querySelectorAll(".slider img").length;
+        const slider = document.querySelector(".slider");
+        slider.style.width = `${totalSlides * 100}vw`;
+
+        function updateSlide() {
+            slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
+        }
+
+        function nextSlide() {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // วนกลับรูปแรก
+            }
+            updateSlide();
+            resetAutoSlide()
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - 1; // วนกลับรูปสุดท้าย
+            }
+            updateSlide();
+            resetAutoSlide()
+        }
+
+        function AutoSlide() {
+        slideInterval = setInterval(nextSlide, 3000);
+        }
+        AutoSlide()
+
+        // ฟังก์ชัน Reset Timer และเริ่มใหม่
+        function resetAutoSlide() {
+            clearInterval(slideInterval); // ล้าง Timer เก่า
+            AutoSlide(); // เริ่มนับใหม่
+        }
+
+        function toggleGridMore() {
+            const Grid = document.querySelector(".gridMore");
+            const more = document.querySelector(".showMore");
+            const less = document.querySelector(".showLess")
+
+            if (Grid.classList.contains("active")) {
+                Grid.classList.remove("active");
+                more.classList.add("active");
+                less.classList.remove("active")
+            }
+            else {
+                Grid.classList.add("active")
+                more.classList.remove("active");
+                less.classList.add("active")
+            }
+        }
+
     </script>
 </body>
 </html>
