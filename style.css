@@ -77,12 +77,10 @@
 
 body {
     width: 100vw;
-    max-width: 1920px;
     color: #f0f0f0;
     font-family: "Roboto Condensed", "Noto Sans Thai", "Prompt", sans-serif;
-    overflow-x: hidden;
     font-size: 18px;
-
+    overflow-x: hidden;
 }
 
 .content {
@@ -92,6 +90,7 @@ body {
 .content.active {
     display: block;
     margin-top: 75px;
+
 }
 
 nav {
@@ -125,7 +124,6 @@ nav {
     background-color: white;
     margin: 8px 0;
     border-radius: 2px;
-    
 }
 
 .logo {
@@ -242,6 +240,7 @@ nav {
     height: calc(100% - 75px);
     width: 100% ;
     background-color: rgb(244, 247, 255);
+    overflow: hidden;
 }
 
 .slider {
@@ -331,6 +330,7 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 75%;
+    max-width: 1080px;
     margin: 10px;
 }
 
@@ -343,6 +343,7 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 75%;
+    max-width: 1080px;
     margin: 10px;
 }
 
@@ -414,6 +415,10 @@ nav {
 
 .showLess.active {
     display: flex;
+}
+
+.overflow {
+    overflow: visible;
 }
 
 .idp-animation {
