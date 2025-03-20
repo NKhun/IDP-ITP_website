@@ -90,7 +90,11 @@ body {
 .content.active {
     display: block;
     margin-top: 75px;
+    overflow-x: hidden;
+}
 
+.idp.background {
+    background: rgba(5, 27, 84, 1);
 }
 
 nav {
@@ -417,17 +421,23 @@ nav {
     display: flex;
 }
 
-.overflow {
-    overflow: visible;
+.idp-animation.content.active {
+    overflow-x: visible;
+    margin-top: 0;
 }
 
+
+
 .idp-animation {
-    background: rgba(5, 27, 84, 1);
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-self: center;
     height: 300vh;
     width: 100%;
+    max-width: 1920px;
+    max-height: 3240px;
+    overflow-x: visible;
 }
 
 .idp-text.one {
@@ -441,7 +451,7 @@ nav {
     position: sticky;
     display: flex;
     flex-direction: column;
-    align-self: end;
+    justify-self: end;
     top: 60%;
     margin: 400px 13% 0 0;
     width: fit-content;
