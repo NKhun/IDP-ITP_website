@@ -21,7 +21,7 @@
                 <a href="#announcement">
                     ประชาสัมพันธ์
                 </a>
-                <a href="#">
+                <a href="#curriculum">
                     หลักสูตร
                 </a>
                 <a href="#">
@@ -42,13 +42,13 @@
             </div>
         </div>
     </nav>
-    <div class="idp background">
-        <div id="idp-content" class="content active">
+    <div id="idp-container" class="content active">
+        <div class="idp-content" id="first">
             <div class="slider-container">
                 <header>
                     <h1 class="header">IDP</h1>
                     <p>Innovative digital program</p>
-                    <button class="idp-itp-button" onclick="toggleIdpItp()"> <span>ไปหน้า</span> ITP</button>
+                    <button class="idp-itp-button" onclick="toggleIdpItp()"> ไปหน้า ITP</button>
                 </header>
                 <div class="slider">
                     <img src="image/PhotoIDP.png" alt="Image">
@@ -140,8 +140,7 @@
                 </button>
             </section>
         </div>
-        
-            <div class="idp-animation content active">
+            <div class="idp-animation">
                 <div class="idp-text one animate">
                     <h1><span>I</span>NNOVATIVE</h1>
                     <h1><span>D</span>IGITAL</h1>
@@ -152,18 +151,68 @@
                     <h1><span>CRAFTING </span>TECHNOLOGY</h1>
                 </div>
                 <svg id="line" class="animate" viewBox="0 0 457 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- เส้นที่ต่อเนื่องกัน -->
                     <path class="line animate" d="M26.2595 26.2511L188 199H426" stroke="#F6F5F5" stroke-width="18" stroke-linecap="round"/>
-                
-                    <!-- จุดเริ่มต้น -->
                     <circle class="circle1 animate" cx="26.6829" cy="25.8277" r="25.8277" stroke-width="5" fill="#F6F5F5"/>
-                
-                    <!-- จุดปลายทาง -->
                     <circle class="circle2 animate" cx="426.5" cy="198.5" r="30.5"  stroke-width="5" fill="#F6F5F5"/>
                 </svg>
             </div>
+        <div class="idp-content" id="second">
+            <section id="curriculum">
+                <h1>CURRICULUM</h1>
+                <div class="bento-grid animate">
+                    <div class="items">
+                        <h2>วัตถุประสงค์</h2>
+                        <p>
+                            <li>เพื่อส่งเสริมศักยภาพผู้เรียนสู่ความเป็นเลิศด้านคอมพิวเตอร์ เทคโนโลยีสารสนเทศ และคณิตศาสตร์</li>
+                            <li>เพื่อส่งเสริมและพัฒนานักเรียนให้สามารถใช้เทคโนโลยีสารสนเทศในการประยุกต์ใช้งานในชีวิตประจำวันได้</li>
+                            <li>เพื่อพัฒนาแหล่งเรียนรู้ สรรหาอุปกรณ์การเรียนการสอน</li>
+                        </p>
+                    </div>
+                    <div class="items">
+                        <h2>กิจกรรมเสริมหลักสูตร</h2>
+                        <p>
+                            <li>การเรียนเสริมวิชาคณิตศาสตร์และคอมพิวเตอร์</li>
+                            <li>ค่ายวิชาการคณิตศาสตร์และคอมพิวเตอร์</li>
+                            <li>ค่ายคณิตศาสตร์และคอมพิวเตอร์</li>
+                            <li>ศึกษาดูงานด้านวิทยาศาสตร์เทคโนโลยี และคณิตศาสตร์</li>
+                            <li>การเข้าร่วมแข่งขันคอมพิวเตอร์ และคณิตศาสตร์</li>
+                        </p>
+                    </div>
+                    <div class="items">
+                        <h2>คุณสมบัติผู้สมัคร</h2>
+                        <p>
+                            <li>เป็นนักเรียนระดับชั้นมัธยมศึกษาปีที่ 1 ของโรงเรียนเตรียมอุดมศึกษาพัฒนาการ</li>
+                            มีผลการเรียนระดับชั้นประถมศึกษาปีที่ 5 และ 6 ดังนี้
+                            <li>ผลการเรียนเฉลี่ยสะสมทุกกลุ่มสาระฯ ไม่ต่ำกว่า 2.5</li>
+                            <li>ผลการเรียนเฉลี่ยสะสมรายวิชาคณิตศาสตร์พื้นฐาน ไม่ต่ำกว่า 2.75</li>
+                            <li>ผลการเรียนเฉลี่ยสะสมรายวิชาเทคโนโลยีสารสนเทศ ไม่ต่ำกว่า 2.75</li>
+                        </p>
+                    </div>
+                    <div class="items">
+                        <h2>ค่าบำรุงรักษา</h2>
+                        <p>
+                            11,000 บาท/ภาคเรียน
+                        </p>
+                    </div>
+                    <div class="items">
+                        <h2>วิชาที่สอบคัดเลือก</h2>
+                        <p>
+                            <li>วิชาคณิตศาสตร์</li>
+                            <li>วิชาวิทยาการคำนวณ</li>
+                        </p>
+                    </div>
+                    <div class="items">
+                        <h2>จำนวนห้องเรียนและนักเรียน</h2>
+                        <p>
+                            1 ห้องเรียน ห้องเรียนละ 40 คน
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
         </div>
-        <div id="itp-content" class="content">
+    </div>
+    <div id="itp-container" class="content">
     </div>
     </div>
     <script>
@@ -171,13 +220,15 @@
         function toggleIdpItp() {
             const idp = document.getElementById("idp");
             const itp = document.getElementById("itp");
-            const idpContent = document.getElementById("idp-content")
-            const itpContent = document.getElementById("itp-content")
+            const nav = document.querySelector("nav")
+            const idpContent = document.getElementById("idp-container");
+            const itpContent = document.getElementById("itp-container");
             const highlight = document.getElementById("highlight-switch");
 
             if (idp.classList.contains("active")) {
                 idp.classList.remove("active");
                 idpContent.classList.remove("active");
+                nav.classList.add("active");
                 highlightswitch.classList.remove("active");
                 itp.classList.add("active");
                 itpContent.classList.add("active");
@@ -188,6 +239,7 @@
                 itpContent.classList.remove("active");
                 idp.classList.add("active");
                 idpContent.classList.add("active");
+                nav.classList.remove("active");
                 highlightswitch.classList.add("active");
                 highlight.style.left = "2%";
             }
@@ -204,7 +256,7 @@
                         entry.target.classList.remove("scroll")
                     }
                 });
-            }, { threshold: 0.01 });
+            }, { threshold: 0.1 });
 
             document.querySelectorAll(".animate").forEach(el => {
                 observer.observe(el);

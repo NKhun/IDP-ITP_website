@@ -44,7 +44,7 @@
     }
 
     100% {
-        line-height: 87px;
+        line-height: 100px;
         filter: blur(0);
         opacity: 1;
     }
@@ -75,11 +75,15 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    font-size: 18px;
+}
+
 body {
     width: 100vw;
     color: #f0f0f0;
     font-family: "Roboto Condensed", "Noto Sans Thai", "Prompt", sans-serif;
-    font-size: 18px;
+    
     overflow-x: hidden;
 }
 
@@ -89,25 +93,33 @@ body {
 
 .content.active {
     display: block;
-    margin-top: 75px;
-    overflow-x: hidden;
+    margin-top: 65px;
 }
 
-.idp.background {
+#idp-container {
     background: rgba(5, 27, 84, 1);
+}
+
+.idp-content {
+    overflow-x: hidden;
 }
 
 nav {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 75px;
+    height: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(17, 46, 119);
     box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.5);
     z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+nav.active {
+    background-color: #3e2ea5;
 }
 
 .burger-nav {
@@ -126,7 +138,7 @@ nav {
     width: 100%;
     height: 4px;
     background-color: white;
-    margin: 8px 0;
+    margin: 7px 0;
     border-radius: 2px;
 }
 
@@ -145,8 +157,7 @@ nav {
     transform: translateY(-30px);
     opacity: 0;
     z-index: 90;
-    transition: transform 0.2s ease-out,
-                opacity   0.2s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .navigator:hover .nav-list {
@@ -161,14 +172,23 @@ nav {
     color: white;
     text-decoration: none;
     background-color: rgb(22, 48, 114);
-    padding: 20px;
+    padding: 18px;
     text-align: center;
     border-right: 1px solid rgb(53, 74, 124);
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav.active .nav-list a{
+    background-color: #3e2ea5;
+    border-right:1px solid #5747be;
 }
 
 .nav-list a:hover {
     background-color: rgb(27, 57, 133);
+}
+
+nav.active .nav-list a:hover {
+    background-color: #4e3dc0;
 }
 
 
@@ -241,7 +261,7 @@ nav {
 .slider-container {
     display: flex;
     position: relative;
-    height: calc(100% - 75px);
+    height: calc(100% - 70px);
     width: 100% ;
     background-color: rgb(244, 247, 255);
     overflow: hidden;
@@ -255,7 +275,7 @@ nav {
 
 .slider img {
     width: 100vw;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 70px);
     object-fit: cover;
     filter: brightness(0.5);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -426,23 +446,22 @@ nav {
     margin-top: 0;
 }
 
-
-
 .idp-animation {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-self: center;
-    height: 300vh;
+    height: 400vh;
     width: 100%;
     max-width: 1920px;
     max-height: 3240px;
     overflow-x: visible;
+    padding-bottom: 400px;
 }
 
 .idp-text.one {
     position: sticky;
-    margin-left: 13%;
+    margin: 0 0 400px 13%;
     top: 20%;
     width: fit-content;
 }
@@ -451,9 +470,9 @@ nav {
     position: sticky;
     display: flex;
     flex-direction: column;
-    justify-self: end;
+    align-self: end;
     top: 60%;
-    margin: 400px 13% 0 0;
+    margin: 400px 13% 100px 0px;
     width: fit-content;
 }
 
@@ -482,9 +501,9 @@ nav {
 svg#line {
     position: sticky;
     display: flex;
-    top: 38%;
+    top: 390px;
     margin-left: 19%;
-    width: 20%;
+    width: 16%;
     height: 17%;
 }
 
@@ -502,10 +521,193 @@ svg .line.animate.scroll {
     animation: drawCircle 1s ease-in-out forwards;
 }
 
-@media (max-width: 1440px) {
+#curriculum {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00244D;
+    background-color: #FFE3CA;
+    padding: 60px;
+}
+
+#curriculum h1 {
+    font-size: 4rem;
+}
+
+.bento-grid.animate.scroll {
+    animation: fadeInBlur 1s ease-in-out;
+}
+
+#curriculum .bento-grid {
+    width: 80%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    grid-template-rows: 2fr 1fr ;
+    gap: 10px;
+    margin: 40px;
+}
+
+.bento-grid .items {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+@media (max-width: 1700px) {
+    @keyframes lineheightBlur {
+        0% {
+            line-height: 400px;
+            filter: blur(3px);
+            opacity: 0;
+        }
+    
+        100% {
+            line-height: 85px;
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
     .idp-text.two h1 {
-        font-size: 1rem;
+        font-size: 4.3rem;
+    }
+
+    .idp-text.one h1 {
+        font-size: 4rem;
+    }
+
+    .idp-text.two {
+        top: 58%;
+        margin: 400px 8% 0 0;
+        width: fit-content;
+    }
+
+    svg#line {
+        margin-left: 20%;
+        top: 320px;
     }
 }
 
+@media (max-width: 1440px) {
+    .idp-text.two {
+        top: 55%;
+        margin: 400px 8% 0 8%;
+        width: fit-content;
+    }
+
+    svg#line {
+        margin-left: 16%;
+        top: 360px;
+    }
+
+    
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 16px;
+    }
+    
+    svg#line {
+       display: none;
+    }
+
+    .idp-text.two {
+        top: 58%;
+    }
+
+    .gridBox {
+        width: 80%;
+    }
+
+    .gridMore {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .gridBox {
+        width: 90%;
+    }
+
+    .gridMore {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .gridBox {
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+    }
+
+    .gridMore {
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+    }
+
+    .idp-text.one {
+        top: 30%;
+    }
+
+    .idp-text.two {
+        top: 60%;
+        margin: 400px 13% 0 13%;
+    }
+
+    .idp-text.one h1 {
+        font-size: 3rem;
+    }
+
+    .idp-text.two h1 {
+        font-size: 2.6rem;
+    }
+
+    .idp-text.one.animate.scroll {
+        animation: fadeInBlur 4.5s cubic-bezier(0.2, 1, 0.5, 1);
+    }
+    
+    .idp-text.two.animate.scroll {
+        animation: fadeInBlur 4.5s cubic-bezier(0.2, 1, 0.5, 1);
+    }
+}
+
+@media (max-width: 600px) {
+    .gridBox {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+
+    .gridMore {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+}
+
+@media (max-width: 430px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .gridBox {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+
+    .gridMore {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+
+    .context {
+        padding: 15px;
+    }
+}
 
