@@ -527,13 +527,14 @@ svg .line.animate.scroll {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #00244D;
-    background-color: #FFE3CA;
+    color: white;
+    background: linear-gradient(180deg, rgba(5, 27, 84, 1), rgb(16, 50, 136) );
     padding: 60px;
 }
 
 #curriculum h1 {
     font-size: 4rem;
+    font-weight: bold;
 }
 
 .bento-grid.animate.scroll {
@@ -546,14 +547,20 @@ svg .line.animate.scroll {
     display: grid;
     grid-template-columns: 1fr 1fr 1.4fr;
     grid-template-rows: 2fr 1fr ;
-    gap: 10px;
+    gap: 12px;
     margin: 40px;
 }
 
 .bento-grid .items {
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid black;
+    background: #d1971833;
+    border: 2px solid #ffbf35;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 30px 25px;
+    transition: all 0.2s ease-in-out;
+}
+.bento-grid .items:hover {
+    background-color: #d9ae5241;
 }
 
 @media (max-width: 1700px) {
@@ -603,7 +610,10 @@ svg .line.animate.scroll {
         top: 360px;
     }
 
-    
+    #curriculum .bento-grid {
+        width: 90%;
+       
+    }
 }
 
 @media (max-width: 1200px) {
@@ -635,6 +645,11 @@ svg .line.animate.scroll {
 
     .gridMore {
         width: 90%;
+    }
+
+    #curriculum .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
     }
 }
 
@@ -681,12 +696,10 @@ svg .line.animate.scroll {
 
 @media (max-width: 600px) {
     .gridBox {
-        grid-template-columns: repeat(2, 1fr);
         width: 80%;
     }
 
     .gridMore {
-        grid-template-columns: repeat(2, 1fr);
         width: 80%;
     }
 }
@@ -697,13 +710,13 @@ svg .line.animate.scroll {
     }
 
     .gridBox {
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        width: 60%;
     }
 
     .gridMore {
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        width: 60%;
     }
 
     .context {
