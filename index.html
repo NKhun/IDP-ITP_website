@@ -283,7 +283,7 @@
     const observer = new MutationObserver(() => {
         if (items1.classList.contains('scroll')) {
         others.forEach((el, i) => {
-        setTimeout(() => el.classList.add('chain'), i * 120); // หน่วง 150ms ต่อชิ้น
+        setTimeout(() => el.classList.add('chain'), i); // หน่วง 150ms ต่อชิ้น
     });
     observer.disconnect(); // หยุดสังเกตทันทีหลังทำงาน
     }
