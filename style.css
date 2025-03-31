@@ -654,6 +654,7 @@ nav.active .nav-list a:hover {
     justify-content: center;
     align-items: center;
     color: white;
+    overflow: hidden;
 }
 
 #curriculum h1 {
