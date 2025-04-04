@@ -112,7 +112,7 @@
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
-        transform: scale(1.25);
+        transform: scale(1.4);
         animation-timing-function: ease;
     }
     100% {
@@ -1097,7 +1097,7 @@ a {
   
   .subject-list li {
     position: relative;
-    padding-left: 30px; /* ให้เว้นที่สำหรับ bullet */
+    padding-left: 30px;
     line-height: 30px;
   }
   
@@ -1411,6 +1411,18 @@ a {
     .grade svg {
         bottom: -48%;
     }
+
+    .grade h2 {
+        font-size: 2rem;
+    }
+
+    .grade p {
+        font-size: 1.4rem;
+    }
+
+    .grade ul {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1453,10 +1465,9 @@ a {
     }
 
     .gridBox {
-        grid-template-columns: repeat(1, 1fr);
         display: flex;
-        overflow-x: auto;
-        width: 90%;
+        overflow-x: scroll;
+        width: 95%;
         padding: 10% 0;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
@@ -1464,7 +1475,7 @@ a {
 
     .context {
         scroll-snap-align: center;
-        width: 45%;
+        min-width: 180px;
         height: 100%;
         flex-shrink: 0;
     }
@@ -1482,7 +1493,7 @@ a {
         height: 700px;
     }
 
-    #curriculum p {
+    #curriculum .first p {
         font-size: 0.8rem;
     }
 
@@ -1553,6 +1564,7 @@ a {
     }
 
     .items6 p {
+        padding: 20px 20px 40px;
         margin: 8px 0 0 16px;
     }
 
