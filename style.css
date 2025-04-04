@@ -1361,6 +1361,7 @@ a {
     .nav-list a {
         width: 100%;
         border-right: none;
+        font-size: 1.3rem;
         border-bottom: 1px solid rgb(53, 74, 124);
     }
 
