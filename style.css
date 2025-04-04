@@ -441,6 +441,11 @@ nav.active .nav-list a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+#highlightswitch.active {
+    left: 0;
+    right: 2%;
+}
+
 .idp-itp-button {
     background: linear-gradient(0deg, #015cc4, #3c73ea);
     backdrop-filter: blur(8px);
