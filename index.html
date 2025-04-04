@@ -393,6 +393,12 @@
     </div>
     </div>
     <script>
+        const burger = document.querySelector('.burger-nav');
+        const navList = document.querySelector('.nav-list');
+
+        burger.addEventListener('click', () => {
+        navList.classList.toggle('show');
+        });
         //change ITP-IDP toggle
         function toggleIdpItp() {
             const idp = document.getElementById("idp");
