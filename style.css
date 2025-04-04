@@ -433,17 +433,17 @@ nav.active .nav-list a:hover {
 #highlightswitch {
     width: 50px;
     height: 35px;
-    border-radius: 18px;
+    border-radius: 20px;
     background-color: rgb(9, 39, 117);
     color: #f0f0f0;
     position: absolute;
-    left: 2%;
+    left: 2px;
     transition: all 0.3s ease-in-out;
 }
 
 #highlightswitch.active {
     left: 0;
-    right: 2%;
+    right: 2px;
 }
 
 .idp-itp-button {
