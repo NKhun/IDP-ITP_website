@@ -406,9 +406,11 @@ nav.active .nav-list a:hover {
 }
 
 .idp-itp-switch {
+    width: 100px;
+    height: 40px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     background-color: #f0f0f0;
@@ -418,8 +420,7 @@ nav.active .nav-list a:hover {
 }
 
 #idp, #itp {
-    padding: 8px 15px;
-    width: 50px;
+    width: auto;
     text-align: center;
     display: flex;
     justify-content:space-evenly;
@@ -431,14 +432,12 @@ nav.active .nav-list a:hover {
 
 #highlightswitch {
     width: 50px;
-    height: 90%;
+    height: 35px;
     border-radius: 18px;
     background-color: rgb(9, 39, 117);
     color: #f0f0f0;
     position: absolute;
-    left: 2px;
-    top: 2px;
-    transform: translate(0px);
+    left: 2%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1358,16 +1357,6 @@ a {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid rgb(53, 74, 124);
-    }
-
-    #idp, #itp {
-        width: 100%;
-        padding: 12px 15px;
-        border-radius: 30px;
-    }
-
-    #highlightswitch {
-        width: 45px;
     }
 
     .gridBox {
