@@ -175,6 +175,23 @@
     }
 }
 
+@keyframes items5_invert {
+    from {
+        transform: translateX(200px)
+                    translateY(-100px)
+                    scale(0);
+        opacity: 0;
+        filter: blur(8px);
+    }
+    to {
+        transform: translateX(0px)
+                    translateY(0px)
+                    scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
 @keyframes items6 {
     from {
         transform: translateX(-200px)
@@ -1244,6 +1261,11 @@ nav.active .nav-list a:hover {
     .items5 {
         grid-column: 1 / span 3;
         grid-row: 8 / span 4;
+    }
+
+    .items5.chain {
+        animation: items5_invert 3s cubic-bezier(0.03, 0.6, 0.1, 1) forwards;
+        animation-delay: 1.5s;
     }
 
     .scrolling-img-container {
