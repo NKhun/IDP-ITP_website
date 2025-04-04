@@ -100,6 +100,26 @@
     }
 }
 
+@keyframes IDPlogo {
+    0% {
+        transform: translateY(-80px);
+        filter: blur(3px);
+        opacity: 0;
+        transform: scale(1.8);
+        animation-timing-function: ease; 
+    }
+    27% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1.25);
+        animation-timing-function: ease;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @keyframes opacity {
     from {
        opacity: 0;
@@ -128,7 +148,7 @@
 
 @keyframes items3 {
     from {
-        transform: translateY(100px)
+        transform: translateY(200px)
                     scale(0);
         opacity: 0;
         filter: blur(8px);
@@ -175,17 +195,15 @@
     }
 }
 
-@keyframes items5_invert {
+@keyframes items5_mobile {
     from {
-        transform: translateX(200px)
-                    translateY(-100px)
+        transform: translateX(-400px)
                     scale(0);
         opacity: 0;
         filter: blur(8px);
     }
     to {
         transform: translateX(0px)
-                    translateY(0px)
                     scale(1);
         opacity: 1;
         filter: blur(0);
@@ -203,6 +221,21 @@
     to {
         transform: translateX(0px)
                     translateY(0px)
+                    scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes items6_mobile {
+    from {
+        transform: translateX(400px)
+                    scale(0);
+        opacity: 0;
+        filter: blur(8px);
+    }
+    to {
+        transform: translateX(0px)
                     scale(1);
         opacity: 1;
         filter: blur(0);
@@ -317,15 +350,20 @@ nav.active .nav-list {
     box-shadow: inset 0 0 32px 0 #4e1664;
 }
 
-.navigator:hover .nav-list {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
+@media (hover: hover) and (pointer: fine) {
+    .navigator:hover .nav-list {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
 
-@media (pointer: coarse) and (max-width: 1200px) {
+@media (pointer: coarse) and (hover: none) {
     .nav-list {
+        transform: translateY(-30px);
+        opacity: 0;
+        visibility: hidden;
         pointer-events: none;
     }
 
@@ -336,12 +374,6 @@ nav.active .nav-list {
         pointer-events: auto;
     }
 
-    .navigator:hover .nav-list {
-        transform: translateY(-30px);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
 }
 
 .nav-list a {
@@ -544,52 +576,26 @@ nav.active .nav-list a:hover {
     animation: fadeInBlur 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+a {
+    text-decoration: none;
+}
+
 .context {
     background: #0050ac1f;
     backdrop-filter: blur(8px);
     border: 2px solid #015fca;
     border-radius: 15px;
+    color: white;
     padding: 30px 25px;
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
 
-.context a {
-    display: none;
-    position: absolute;
-    border-radius: 25px;
-    top: 40%;
-    left: 30%;
-    padding: 8px;
-    color: #ffffff;
-    text-decoration: none;
-    background: #f0ac1b;
-    border: 2px solid #f0ac1b;
-    box-shadow: 0 2px 12px #f0ac1b;
-    backdrop-filter: blur(8px);
-    transition: all 0.2s ease-in-out;
-}
-
-
-.context a:hover {
-    background: #ffc443;
-    color: white;
-    border: 2px solid #ffc443;
-}
-
-.context:hover a {
-    display: block;
-}
-
 .context:hover {
     transform: scale(1.08);
-    background: #d1971833;
-    border: 2px solid #fcac00;
+    background: #ac771531;
+    border: 2px solid #ffa928;
     z-index: 10;
-}
-
-.context:hover p, .context:hover img , .context:hover h3 {
-    filter: blur(3px);
 }
 
 .context img {
@@ -734,16 +740,16 @@ nav.active .nav-list a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
+    z-index: 10;
 }
 
 .items1 .IDPlogo {
     width: 45%;
-    animation: blink 6s ease infinite;
+    animation: blink 4s ease infinite;
 }
 
 .items1.animate.scroll {
-    animation: fadeInBlur 3s ease-out;
+    animation: IDPlogo 5.5s forwards;
 }
 
 .items2 {
@@ -793,7 +799,7 @@ nav.active .nav-list a:hover {
 }
 
 .items2.chain {
-    animation: items2 3s cubic-bezier(0.03, 0.6, 0.1, 1)  forwards;
+    animation: items2 4s cubic-bezier(0,.1,0,1) forwards;
     animation-delay: 1.5s;
 }
 
@@ -834,7 +840,7 @@ nav.active .nav-list a:hover {
 }
 
 .items3.chain {
-    animation: items3 3s cubic-bezier(0.03, 0.6, 0.1, 1) forwards;
+    animation: items3 4s cubic-bezier(0,.1,0,1) forwards;
     animation-delay: 1.5s;
 }
 
@@ -879,7 +885,7 @@ nav.active .nav-list a:hover {
 }
 
 .items4.chain {
-    animation: items4 3s cubic-bezier(0.03, 0.6, 0.1, 1) forwards;
+    animation: items4 4s cubic-bezier(0,.1,0,1) forwards;
     animation-delay: 1.5s;
 }
 
@@ -935,7 +941,7 @@ nav.active .nav-list a:hover {
 }
 
 .items5.chain {
-    animation: items5 3s cubic-bezier(0.03, 0.6, 0.1, 1)  forwards;
+    animation: items5 4s cubic-bezier(0,.1,0,1)  forwards;
     animation-delay: 1.5s;
 }
 
@@ -975,7 +981,7 @@ nav.active .nav-list a:hover {
 }
 
 .items6.chain {
-    animation: items6 3s cubic-bezier(0.03, 0.6, 0.1, 1) forwards;
+    animation: items6 4s cubic-bezier(0,.1,0,1) forwards;
     animation-delay: 1.5s;
 }
 
@@ -1288,7 +1294,7 @@ nav.active .nav-list a:hover {
     }
 
     .items5.chain {
-        animation: items5_invert 3s cubic-bezier(0.03, 0.6, 0.1, 1) forwards;
+        animation: items5_mobile 3s cubic-bezier(0.1, 0.6, 0.1, 1) forwards;
         animation-delay: 1.5s;
     }
 
@@ -1299,6 +1305,11 @@ nav.active .nav-list a:hover {
     .items6 {
         grid-column: 4 / span 3;
         grid-row: 8 / span 4;
+    }
+
+    .items6.chain {
+        animation: items6_mobile 3s cubic-bezier(0.1, 0.6, 0.1, 1) forwards;
+        animation-delay: 1.5s;
     }
 
     .course-grid {
