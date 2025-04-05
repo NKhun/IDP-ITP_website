@@ -100,7 +100,7 @@
     }
 }
 
-@keyframes IDPlogo {
+@keyframes IDP_ITPlogo {
     0% {
         transform: translateY(-80px);
         filter: blur(3px);
@@ -108,7 +108,7 @@
         transform: scale(1.8);
         animation-timing-function: ease; 
     }
-    27% {
+    25% {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
@@ -757,7 +757,7 @@ a {
 }
 
 .items1.animate.scroll {
-    animation: IDPlogo 5.5s forwards;
+    animation: IDP_ITPlogo 6s forwards;
 }
 
 .items2 {
@@ -1011,7 +1011,7 @@ a {
     grid-template-rows: repeat(1, 1fr);
     width: 1200px;
     gap: 8px;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
 }
 
 .course-grid.animate.scroll {
@@ -1559,12 +1559,12 @@ a {
     }
 
     .items6 p {
-        padding: 20px 20px 40px;
         margin: 8px 0 0 16px;
     }
 
     .grade {
         flex: 0 0 90%;
+        padding: 20px 20px 40px;
     }
 }
 
