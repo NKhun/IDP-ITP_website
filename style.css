@@ -13,6 +13,16 @@
     }
 }
 
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 @keyframes fadeInBlur {
     0% {
         transform: translateY(-80px);
@@ -105,138 +115,26 @@
         transform: translateY(-80px);
         filter: blur(3px);
         opacity: 0;
-        transform: scale(1.8);
+        transform: scale(0.8);
         animation-timing-function: ease; 
     }
-    25% {
+    100% {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
-        transform: scale(1.4);
-        animation-timing-function: ease;
-    }
-    100% {
         transform: scale(1);
+        animation-timing-function: ease;
     }
 }
 
 @keyframes opacity {
     from {
+        transform: scale(1.1);
        opacity: 0;
+       filter: blur(3px);
     }
     to {
-        opacity: 1;
-    }
-}
-
-@keyframes items2 {
-    from {
-        transform: translateX(200px)
-                    translateY(100px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateX(0px)
-                    translateY(0px)
-                    scale(1);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes items3 {
-    from {
-        transform: translateY(200px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateY(0px)
-                    scale(1);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes items4 {
-    from {
-        transform: translateX(200px)
-                    translateY(-100px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateX(0px)
-                    translateY(0px)
-                    scale(1);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes items5 {
-    from {
-        transform: translateX(-200px)
-                    translateY(150px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateX(0px)
-                    translateY(0px)
-                    scale(1);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes items5_mobile {
-    from {
-        transform: translateX(-400px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateX(0px)
-                    scale(1);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes items6 {
-    from {
-        transform: translateX(-200px)
-                    translateY(-100px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateX(0px)
-                    translateY(0px)
-                    scale(1);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes items6_mobile {
-    from {
-        transform: translateX(400px)
-                    scale(0);
-        opacity: 0;
-        filter: blur(8px);
-    }
-    to {
-        transform: translateX(0px)
-                    scale(1);
+        transform: scale(1);
         opacity: 1;
         filter: blur(0);
     }
@@ -729,7 +627,7 @@ a {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 1fr);
     gap: 8px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .bento-grid h2 {
@@ -757,7 +655,7 @@ a {
 }
 
 .items1.animate.scroll {
-    animation: IDP_ITPlogo 6s forwards;
+    animation: IDP_ITPlogo 1.5s forwards;
 }
 
 .items2 {
@@ -807,8 +705,8 @@ a {
 }
 
 .items2.chain {
-    animation: items2 4s cubic-bezier(0,.1,0,1) forwards;
-    animation-delay: 1.5s;
+    animation: opacity 1.5s ease forwards;
+    animation-delay: 2s;
 }
 
 .items3 {
@@ -848,7 +746,7 @@ a {
 }
 
 .items3.chain {
-    animation: items3 4s cubic-bezier(0,.1,0,1) forwards;
+    animation: opacity 2s ease forwards;
     animation-delay: 1.5s;
 }
 
@@ -893,8 +791,8 @@ a {
 }
 
 .items4.chain {
-    animation: items4 4s cubic-bezier(0,.1,0,1) forwards;
-    animation-delay: 1.5s;
+    animation: opacity 2s ease forwards;
+    animation-delay: 2.5s;
 }
 
 .items5 {
@@ -924,12 +822,15 @@ a {
 }
 
 .scrolling-img-container {
-    height: 50%;
     display: flex;
-    margin-top: 4px;
     overflow: hidden;
     z-index: 10;
 
+}
+
+.items5 .scrolling-img-container {
+    height: 50%;
+    margin-top: 4px;
 }
 
 .marquee-img {
@@ -949,8 +850,8 @@ a {
 }
 
 .items5.chain {
-    animation: items5 4s cubic-bezier(0,.1,0,1)  forwards;
-    animation-delay: 1.5s;
+    animation: opacity 2s ease forwards;
+    animation-delay: 3s;
 }
 
 .items6 {
@@ -989,8 +890,8 @@ a {
 }
 
 .items6.chain {
-    animation: items6 4s cubic-bezier(0,.1,0,1) forwards;
-    animation-delay: 1.5s;
+    animation: opacity 2.5s ease forwards;
+    animation-delay: 3.5s;
 }
 
 .items1, .items2, .items3, .items4, .items5, .items6 {
@@ -1011,7 +912,7 @@ a {
     grid-template-rows: repeat(1, 1fr);
     width: 1200px;
     gap: 8px;
-    margin-bottom: 400px;
+    margin: 300px 0 250px ;
 }
 
 .course-grid.animate.scroll {
@@ -1122,6 +1023,20 @@ a {
   .grade:hover .subject-list li::before {
     background-image: url('image/check_circle-hover.png');
   }
+ล
+#directory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100vw;
+}
+
+#directory img {
+    width: 100%;
+    margin-bottom: 250px;
+} 
 
 @media (max-width: 1700px) {
     @keyframes lineheightBlur {
@@ -1301,11 +1216,6 @@ a {
         grid-row: 8 / span 4;
     }
 
-    .items5.chain {
-        animation: items5_mobile 3s cubic-bezier(0.1, 0.6, 0.1, 1) forwards;
-        animation-delay: 1.5s;
-    }
-
     .scrolling-img-container {
         height: 60%;
     }
@@ -1313,11 +1223,6 @@ a {
     .items6 {
         grid-column: 4 / span 3;
         grid-row: 8 / span 4;
-    }
-
-    .items6.chain {
-        animation: items6_mobile 3s cubic-bezier(0.1, 0.6, 0.1, 1) forwards;
-        animation-delay: 1.5s;
     }
 
     .course-grid {
