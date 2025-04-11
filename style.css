@@ -23,6 +23,21 @@
     }
 }
 
+
+@keyframes fadeOutBlur {
+    0% {
+        transform: translateY(80px);
+        filter: blur(3px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInBlur {
     0% {
         transform: translateY(-80px);
@@ -110,7 +125,7 @@
     }
 }
 
-@keyframes IDP_ITPlogo {
+@keyframes bentogrid {
     0% {
         transform: translateY(-80px);
         filter: blur(3px);
@@ -499,8 +514,8 @@ a {
 
 .context:hover {
     transform: scale(1.08);
-    background: #ac771531;
-    border: 2px solid #ffa928;
+    background: #c2851331;
+    border: 2px solid #ffa621;
     z-index: 10;
 }
 
@@ -655,7 +670,7 @@ a {
 }
 
 .items1.animate.scroll {
-    animation: IDP_ITPlogo 1.5s forwards;
+    animation: bentogrid 1.5s forwards;
 }
 
 .items2 {
@@ -705,7 +720,7 @@ a {
 }
 
 .items2.chain {
-    animation: opacity 1.5s ease forwards;
+    animation: fadeInBlur 1.5s ease forwards;
     animation-delay: 2s;
 }
 
@@ -746,7 +761,7 @@ a {
 }
 
 .items3.chain {
-    animation: opacity 2s ease forwards;
+    animation: fadeLeftBlur 2s ease forwards;
     animation-delay: 1.5s;
 }
 
@@ -791,7 +806,7 @@ a {
 }
 
 .items4.chain {
-    animation: opacity 2s ease forwards;
+    animation: fadeRightBlur 2s ease forwards;
     animation-delay: 2.5s;
 }
 
@@ -850,7 +865,7 @@ a {
 }
 
 .items5.chain {
-    animation: opacity 2s ease forwards;
+    animation: bentogrid 2s ease forwards;
     animation-delay: 3s;
 }
 
@@ -890,7 +905,7 @@ a {
 }
 
 .items6.chain {
-    animation: opacity 2.5s ease forwards;
+    animation: bentogrid 2.5s ease forwards;
     animation-delay: 3.5s;
 }
 
