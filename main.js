@@ -109,18 +109,3 @@ const burger = document.querySelector('.burger-nav');
 
         // เมื่อโหลดหน้าเว็บ อัปเดตความกว้าง slider
         updateSliderWidth();
-
-
-        const items1 = document.querySelector('.items1.animate');
-        const others = document.querySelectorAll('.items2, .items3, .items4, .items5, .items6');
-
-        const observer = new MutationObserver(() => {
-            if (items1.classList.contains('scroll')) {
-            others.forEach((el, i) => {
-            setTimeout(() => el.classList.add('chain'), i); // หน่วง 150ms ต่อชิ้น
-        });
-        
-        }
-        });
-
-        observer.observe(items1, { attributes: true });
